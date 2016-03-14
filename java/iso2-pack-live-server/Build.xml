@@ -1,0 +1,27 @@
+<project name="iso2" default="jar" basedir=".">
+
+<taskdef name="jarjar" classname="com.tonicsystems.jarjar.JarJarTask"
+         
+		 classpath="libs/jarjar-1.1.jar"/>
+	
+<target name="jar" >
+
+		<jarjar jarfile="libs/newMyJar.jar">
+       
+        <zipfileset src="libs/commons-beanutils.jar"/>
+    	<zipfileset src="libs/commons-collections.jar"/>
+    	<zipfileset src="libs/commons-lang-2.4.jar"/>
+    	<zipfileset src="libs/commons-logging.jar"/>
+    	<zipfileset src="libs/ezmorph-1.0.jar"/>
+    	<zipfileset src="libs/json-lib-2.2.2-jdk15.jar"/>
+    	<zipfileset src="libs/cueappsTest1.jar"/>
+    	
+        <manifest>
+	<attribute name="Main-Class" value="com.iso8583.main"/>
+	</manifest>
+		
+		
+	</jarjar>
+</target>
+
+</project>
